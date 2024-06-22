@@ -9,7 +9,7 @@ import { prepareContractCall } from "thirdweb";
 import { useSendTransaction } from "thirdweb/react";
 
 type Props = {
-  tasks: Array<Task> | [];
+  tasks: Task[];
 };
 
 function KanbanBoard({ tasks }: Props) {
