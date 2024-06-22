@@ -30,8 +30,6 @@ function KanbanBoard({ tasks }: Props) {
     e.preventDefault();
     const id = e.dataTransfer.getData("id");
 
-    alert(status);
-
     const transaction = await prepareContractCall({
       contract: CONTRACT,
       method: "updateTaskStatus",
@@ -42,7 +40,7 @@ function KanbanBoard({ tasks }: Props) {
   };
 
   return (
-    <div className="flex items-start flex-1 space-x-2 px-10 ">
+    <div className="flex items-start flex-1 space-x-4 px-10 ">
       {columns.map((column, columnIndex) => (
         <div
           className="column"

@@ -18,7 +18,7 @@ export default function Home() {
   const { data, isLoading } = useReadContract({
     contract: CONTRACT,
     method: "getAllTasksByUser",
-    params: [account?.address.toString()],
+    params: [account?.address as string],
   });
 
   console.log(data);
