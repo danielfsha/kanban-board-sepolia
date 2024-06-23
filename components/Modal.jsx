@@ -8,13 +8,8 @@ import { priorities } from "@/data/task";
 import { prepareContractCall } from "thirdweb";
 import { CONTRACT } from "@/utils/constants";
 
-type Props = {
-  isOpen: boolean;
-  toggleModal: () => void;
-};
-
-function Modal({ isOpen, toggleModal }: Props) {
-  const [taskText, setTaskText] = useState<string>("");
+function Modal({ isOpen, toggleModal }) {
+  const [taskText, setTaskText] = useState("");
 
   return (
     <div

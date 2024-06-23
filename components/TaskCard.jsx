@@ -3,12 +3,8 @@
 import { Task } from "@/data/task";
 import React, { useState } from "react";
 
-type Props = {
-  task: Task;
-};
-
-function TaskCard({ task }: Props) {
-  const [isBeingDragged, setIsBeingDragged] = useState<boolean>(false);
+function TaskCard({ task }) {
+  const [isBeingDragged, setIsBeingDragged] = useState(false);
 
   return (
     <div>

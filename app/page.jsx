@@ -12,13 +12,13 @@ import { CONTRACT } from "@/utils/constants";
 import { Task } from "@/data/task";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
   const account = useActiveAccount();
 
   const { data, isLoading } = useReadContract({
     contract: CONTRACT,
     method: "getAllTasksByUser",
-    params: [account?.address as string],
+    params: [account?.address],
   });
 
   console.log(data);

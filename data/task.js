@@ -1,19 +1,19 @@
-export type Status = 'todo' |'in progress'| 'done'
+// export type Status = 'todo' |'in progress'| 'done'
 
-export type Priority = 'low' | 'medium' | 'high'
+// export type Priority = 'low' | 'medium' | 'high'
 
-export type Task = {
-    id: number,
-    title: string,
-    status: Status,
-    priority: Priority,
-    timestamp: number
-}
+// export type Task = {
+//     id: number,
+//     title: string,
+//     status: Status,
+//     priority: Priority,
+//     timestamp: number
+// }
 
-export const statuses: Status[] = ['todo', 'in progress', 'done']
-export const priorities: Priority[] = ['low', 'medium', 'high']
+export const statuses = ['todo', 'in progress', 'done']
+export const priorities = ['low', 'medium', 'high']
 
-export const tasks: Array<Task> = [
+export const tasks = [
     {
         id: 1,
         title: "Do the dishes",
@@ -35,7 +35,7 @@ export const tasks: Array<Task> = [
         priority: 'medium',
         timestamp: 10000000
     },
-     {
+    {
         id: 4,
         title: "Trim the trees",
         status: "in progress",

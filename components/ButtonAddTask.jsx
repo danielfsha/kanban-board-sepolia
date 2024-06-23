@@ -1,11 +1,6 @@
 "use client";
 
-type Props = {
-  isOpen: boolean;
-  toggleModal: () => void;
-};
-
-function ButtonAddTask({ isOpen, toggleModal }: Props) {
+function ButtonAddTask({ isOpen, toggleModal }) {
   return (
     <button onClick={() => toggleModal()} className="btn">
       <svg

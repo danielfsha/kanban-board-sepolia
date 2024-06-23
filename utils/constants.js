@@ -3,7 +3,7 @@ import { createThirdwebClient, defineChain, getContract } from "thirdweb";
 const CLIENT_ID = process.env.NEXT_PUBLIC_CLIENT_ID;
 
 export const client = createThirdwebClient({
-    clientId: CLIENT_ID as string,
+	clientId: CLIENT_ID,
 });
 
 export const chain = defineChain(11155111);
@@ -240,11 +240,11 @@ const contractABI = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-] as const;
+];
 
 export const CONTRACT = getContract({
-    client: client,
-    chain: chain,
-    address: contractAddress,
-    abi: contractABI
+	client: client,
+	chain: chain,
+	address: contractAddress,
+	abi: contractABI
 });

@@ -8,11 +8,7 @@ import { CONTRACT } from "@/utils/constants";
 import { prepareContractCall } from "thirdweb";
 import { useSendTransaction } from "thirdweb/react";
 
-type Props = {
-  tasks: Task[];
-};
-
-function KanbanBoard({ tasks }: Props) {
+function KanbanBoard({ tasks }) {
   const { mutate: sendTransaction, isPending } = useSendTransaction();
 
   const columns = statuses.map((status) => {
@@ -23,10 +19,7 @@ function KanbanBoard({ tasks }: Props) {
     };
   });
 
-  const handleDrop = async (
-    e: React.DragEvent<HTMLDivElement>,
-    status: Status,
-  ) => {
+  const handleDrop = async (e, status) => {
     e.preventDefault();
     const id = e.dataTransfer.getData("id");
 
